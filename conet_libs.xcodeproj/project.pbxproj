@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B30A876B2CB4DA680048EB68 /* conet_libs.h in Headers */ = {isa = PBXBuildFile; fileRef = B30A876A2CB4DA680048EB68 /* conet_libs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30A87722CB4DBC90048EB68 /* Conet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A87712CB4DBC90048EB68 /* Conet.swift */; };
-		B3F2B4852CB82569006D0974 /* Sentimentalist.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = B3F2B4842CB82569006D0974 /* Sentimentalist.bundle.js */; };
 		B3FE76E42CB82E1700721D62 /* web3-zksync.swift in Frameworks */ = {isa = PBXBuildFile; productRef = B3FE76E32CB82E1700721D62 /* web3-zksync.swift */; };
 		B3FE76E62CB82E1700721D62 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = B3FE76E52CB82E1700721D62 /* web3.swift */; };
 		B3FE76E92CB8318800721D62 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = B3FE76E82CB8318800721D62 /* SwiftProtobuf */; };
@@ -20,7 +19,6 @@
 		B30A87672CB4DA680048EB68 /* conet_libs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = conet_libs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30A876A2CB4DA680048EB68 /* conet_libs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = conet_libs.h; sourceTree = "<group>"; };
 		B30A87712CB4DBC90048EB68 /* Conet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conet.swift; sourceTree = "<group>"; };
-		B3F2B4842CB82569006D0974 /* Sentimentalist.bundle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = Sentimentalist.bundle.js; path = JS/dist/Sentimentalist.bundle.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +39,6 @@
 		B30A875D2CB4DA680048EB68 = {
 			isa = PBXGroup;
 			children = (
-				B3F2B4842CB82569006D0974 /* Sentimentalist.bundle.js */,
 				B30A87692CB4DA680048EB68 /* conet_libs */,
 				B30A87682CB4DA680048EB68 /* Products */,
 			);
@@ -146,7 +143,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F2B4852CB82569006D0974 /* Sentimentalist.bundle.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
