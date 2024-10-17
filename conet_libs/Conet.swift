@@ -1,6 +1,13 @@
 import Foundation
 import WalletCore
 import CryptoKit
+import ObjectivePGP
+
+struct NodeInfo {
+    let ipAddress: String
+    let regionName: String
+    let pgp: String
+}
 
 public class ConetClass {
     private let userDefaultsKey = "userWallet"
@@ -113,7 +120,68 @@ public class ConetClass {
             print("Failed to encode wallet data.")
         }
     }
-}
+    
+    private func loadPGPKeys(armoredKey: String) throws -> [Key] {
+        print("armoredKey:", armoredKey)
+        let data = armoredKey.data(using: .utf8)!
+        
+        let keys = try ObjectivePGP.readKeys(from: data)
+        
+        guard !keys.isEmpty else {
+            throw NSError(domain: "PGPError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to read PGP keys"])
+        }
+        
+        print("pgpKeys:", keys.count)
+        print("pgpKeys1:", keys[0].publicKey?.subKeys[0])
+        return keys // Retorna todas as chaves
+    }
+    
+
+    
+    public func startMining() {
+        let nodes = ["KS.US","LND.GB","ND.US","MD.ES","NJ.US","NW.DE","PA.US"]
+        let nodeInfo = NodeInfo(
+            ipAddress: "216.225.197.187",
+            regionName: "PA.US",
+            pgp: """
+            LS0tLS1CRUdJTiBQR1AgUFVCTElDIEtFWSBCTE9DSy0tLS0tCgp4ak1FWm43eE5CWUpLd1lCQkFIYVJ3OEJBUWRBZXRFMnRXVVpZZ3NBcmpnUmh1NEdrS2xnSk5UVUk1THIKUWFkcjVIRzhXSFROS2pCNE5USTFPRGt4TW1RMlJqSTRORFU1TWpFek16TmtNVGcwTkRJNE5rUkNPR0l5Ck0yRTFZVVpoWk1LTUJCQVdDZ0ErQllKbWZ2RTBCQXNKQndnSmtDbG13ZEMyNUpZM0F4VUlDZ1FXQUFJQgpBaGtCQXBzREFoNEJGaUVFT1pNWnVVQnpIZnBiNnlTWUtXYkIwTGJrbGpjQUFNWGtBUDk4RGxNampxcnoKVGtRNjkvc1Rka29VL3BZa1N1c29QZVQxUDliVWRZS1BtUUVBOEhxNmZScTA4SmNhKzByT1NUQ2FReDVpClhWTU1xeTJlR2tHVmdYcUZQQWpPT0FSbWZ2RTBFZ29yQmdFRUFaZFZBUVVCQVFkQXE1UFUxaXVnMUQ2NQo1UjREMHNaTjMzMDY3YnVqdFVMZjN5UmdRL2hXb3hjREFRZ0h3bmdFR0JZS0FDb0ZnbVorOFRRSmtDbG0Kd2RDMjVKWTNBcHNNRmlFRU9aTVp1VUJ6SGZwYjZ5U1lLV2JCMExia2xqY0FBRlhkQVA5azFGL3c1cWlrCmlkT0ZoTXJ3UVRxUlVZY3c5emV1M3E4U0QwR3ozcmpoeEFFQXRNZXpmanEwVFJSY0FSdTIzbGt1dkwyMgp0NVZFZjRjSkdCUDlsZ2svTnc0PQo9N1lJbgotLS0tLUVORCBQR1AgUFVCTElDIEtFWSBCTE9DSy0tLS0tCg==
+            """
+        )
+        
+        print(nodeInfo)
+        let base64EncodedPGP = nodeInfo.pgp
+        var pgpString: String? = nil
+        var pgpKeys: [Key]? = nil
+        if let decodedData = Data(base64Encoded: base64EncodedPGP) {
+            if let decodedString = String(data: decodedData, encoding: .utf8) {
+                pgpString = decodedString
+                print("Chave PGP armored: \(pgpString!)")
+            } else {
+                print("Erro ao converter dados para string")
+            }
+        } else {
+            print("Erro ao decodificar Base64")
+        }
+
+        do {
+            if let pgpString = pgpString {
+                pgpKeys = try loadPGPKeys(armoredKey: pgpString)
+            } else {
+                print("pgpString é nulo, não é possível carregar a chave PGP")
+            }
+        } catch {
+            print("Erro ao carregar a chave PGP: \(error)")
+        }
+        if let publicKey = pgpKeys![0].publicKey?.subKeys[0] {
+            let keyID = publicKey.keyID
+            let hexString = keyID.description.uppercased()
+            let domain = hexString + ".conet.network"
+                print("Domain: \(domain)")
+            } else {
+                print("Error")
+            }
+        
+    }}
 
 public struct Wallet: Codable {
     let privateKey: String

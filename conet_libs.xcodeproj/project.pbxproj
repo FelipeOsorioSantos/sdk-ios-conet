@@ -9,8 +9,23 @@
 /* Begin PBXBuildFile section */
 		B30A876B2CB4DA680048EB68 /* conet_libs.h in Headers */ = {isa = PBXBuildFile; fileRef = B30A876A2CB4DA680048EB68 /* conet_libs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30A87722CB4DBC90048EB68 /* Conet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A87712CB4DBC90048EB68 /* Conet.swift */; };
-		B3FE76E42CB82E1700721D62 /* web3-zksync.swift in Frameworks */ = {isa = PBXBuildFile; productRef = B3FE76E32CB82E1700721D62 /* web3-zksync.swift */; };
-		B3FE76E62CB82E1700721D62 /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = B3FE76E52CB82E1700721D62 /* web3.swift */; };
+		B363D14B2CC1445100CD67FB /* ObjectivePGP in Frameworks */ = {isa = PBXBuildFile; productRef = B363D14A2CC1445100CD67FB /* ObjectivePGP */; };
+		B363D14D2CC16F6B00CD67FB /* web3-zksync.swift in Frameworks */ = {isa = PBXBuildFile; productRef = B363D14C2CC16F6B00CD67FB /* web3-zksync.swift */; };
+		B363D14F2CC16F6B00CD67FB /* web3.swift in Frameworks */ = {isa = PBXBuildFile; productRef = B363D14E2CC16F6B00CD67FB /* web3.swift */; };
+		B3C2F5332CBEDDD3000C5D49 /* Atomics in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5322CBEDDD3000C5D49 /* Atomics */; };
+		B3C2F5352CBEDEA2000C5D49 /* _NIOConcurrency in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5342CBEDEA2000C5D49 /* _NIOConcurrency */; };
+		B3C2F5372CBEDEA2000C5D49 /* _NIOFileSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5362CBEDEA2000C5D49 /* _NIOFileSystem */; };
+		B3C2F5392CBEDEA2000C5D49 /* _NIOFileSystemFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5382CBEDEA2000C5D49 /* _NIOFileSystemFoundationCompat */; };
+		B3C2F53B2CBEDEA2000C5D49 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F53A2CBEDEA2000C5D49 /* NIO */; };
+		B3C2F53D2CBEDEA2000C5D49 /* NIOConcurrencyHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F53C2CBEDEA2000C5D49 /* NIOConcurrencyHelpers */; };
+		B3C2F53F2CBEDEA2000C5D49 /* NIOCore in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F53E2CBEDEA2000C5D49 /* NIOCore */; };
+		B3C2F5412CBEDEA2000C5D49 /* NIOEmbedded in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5402CBEDEA2000C5D49 /* NIOEmbedded */; };
+		B3C2F5432CBEDEA2000C5D49 /* NIOFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5422CBEDEA2000C5D49 /* NIOFoundationCompat */; };
+		B3C2F5452CBEDEA2000C5D49 /* NIOHTTP1 in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5442CBEDEA2000C5D49 /* NIOHTTP1 */; };
+		B3C2F5472CBEDEA3000C5D49 /* NIOPosix in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5462CBEDEA3000C5D49 /* NIOPosix */; };
+		B3C2F5492CBEDEA3000C5D49 /* NIOTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F5482CBEDEA3000C5D49 /* NIOTestUtils */; };
+		B3C2F54B2CBEDEA3000C5D49 /* NIOTLS in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F54A2CBEDEA3000C5D49 /* NIOTLS */; };
+		B3C2F54D2CBEDEA3000C5D49 /* NIOWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = B3C2F54C2CBEDEA3000C5D49 /* NIOWebSocket */; };
 		B3FE76E92CB8318800721D62 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = B3FE76E82CB8318800721D62 /* SwiftProtobuf */; };
 		B3FE76EB2CB8318800721D62 /* WalletCore in Frameworks */ = {isa = PBXBuildFile; productRef = B3FE76EA2CB8318800721D62 /* WalletCore */; };
 /* End PBXBuildFile section */
@@ -26,10 +41,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C2F53B2CBEDEA2000C5D49 /* NIO in Frameworks */,
 				B3FE76EB2CB8318800721D62 /* WalletCore in Frameworks */,
-				B3FE76E62CB82E1700721D62 /* web3.swift in Frameworks */,
-				B3FE76E42CB82E1700721D62 /* web3-zksync.swift in Frameworks */,
+				B3C2F5432CBEDEA2000C5D49 /* NIOFoundationCompat in Frameworks */,
+				B3C2F5492CBEDEA3000C5D49 /* NIOTestUtils in Frameworks */,
+				B3C2F5452CBEDEA2000C5D49 /* NIOHTTP1 in Frameworks */,
+				B363D14F2CC16F6B00CD67FB /* web3.swift in Frameworks */,
+				B3C2F5412CBEDEA2000C5D49 /* NIOEmbedded in Frameworks */,
+				B3C2F5332CBEDDD3000C5D49 /* Atomics in Frameworks */,
+				B3C2F5392CBEDEA2000C5D49 /* _NIOFileSystemFoundationCompat in Frameworks */,
+				B363D14B2CC1445100CD67FB /* ObjectivePGP in Frameworks */,
+				B3C2F5352CBEDEA2000C5D49 /* _NIOConcurrency in Frameworks */,
+				B363D14D2CC16F6B00CD67FB /* web3-zksync.swift in Frameworks */,
+				B3C2F54B2CBEDEA3000C5D49 /* NIOTLS in Frameworks */,
+				B3C2F54D2CBEDEA3000C5D49 /* NIOWebSocket in Frameworks */,
+				B3C2F5472CBEDEA3000C5D49 /* NIOPosix in Frameworks */,
 				B3FE76E92CB8318800721D62 /* SwiftProtobuf in Frameworks */,
+				B3C2F5372CBEDEA2000C5D49 /* _NIOFileSystem in Frameworks */,
+				B3C2F53F2CBEDEA2000C5D49 /* NIOCore in Frameworks */,
+				B3C2F53D2CBEDEA2000C5D49 /* NIOConcurrencyHelpers in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +71,7 @@
 			children = (
 				B30A87692CB4DA680048EB68 /* conet_libs */,
 				B30A87682CB4DA680048EB68 /* Products */,
+				B3C2F5172CBEDDD2000C5D49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +90,13 @@
 				B30A87712CB4DBC90048EB68 /* Conet.swift */,
 			);
 			path = conet_libs;
+			sourceTree = "<group>";
+		};
+		B3C2F5172CBEDDD2000C5D49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,13 +125,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				B3C2F5132CBED9B2000C5D49 /* PBXTargetDependency */,
+				B3C2F5112CBED9AF000C5D49 /* PBXTargetDependency */,
 			);
 			name = conet_libs;
 			packageProductDependencies = (
-				B3FE76E32CB82E1700721D62 /* web3-zksync.swift */,
-				B3FE76E52CB82E1700721D62 /* web3.swift */,
 				B3FE76E82CB8318800721D62 /* SwiftProtobuf */,
 				B3FE76EA2CB8318800721D62 /* WalletCore */,
+				B3C2F5322CBEDDD3000C5D49 /* Atomics */,
+				B3C2F5342CBEDEA2000C5D49 /* _NIOConcurrency */,
+				B3C2F5362CBEDEA2000C5D49 /* _NIOFileSystem */,
+				B3C2F5382CBEDEA2000C5D49 /* _NIOFileSystemFoundationCompat */,
+				B3C2F53A2CBEDEA2000C5D49 /* NIO */,
+				B3C2F53C2CBEDEA2000C5D49 /* NIOConcurrencyHelpers */,
+				B3C2F53E2CBEDEA2000C5D49 /* NIOCore */,
+				B3C2F5402CBEDEA2000C5D49 /* NIOEmbedded */,
+				B3C2F5422CBEDEA2000C5D49 /* NIOFoundationCompat */,
+				B3C2F5442CBEDEA2000C5D49 /* NIOHTTP1 */,
+				B3C2F5462CBEDEA3000C5D49 /* NIOPosix */,
+				B3C2F5482CBEDEA3000C5D49 /* NIOTestUtils */,
+				B3C2F54A2CBEDEA3000C5D49 /* NIOTLS */,
+				B3C2F54C2CBEDEA3000C5D49 /* NIOWebSocket */,
+				B363D14A2CC1445100CD67FB /* ObjectivePGP */,
+				B363D14C2CC16F6B00CD67FB /* web3-zksync.swift */,
+				B363D14E2CC16F6B00CD67FB /* web3.swift */,
 			);
 			productName = conet_libs;
 			productReference = B30A87672CB4DA680048EB68 /* conet_libs.framework */;
@@ -128,6 +183,8 @@
 				B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */,
 				B37253DE2CB6AE2A002E4102 /* XCRemoteSwiftPackageReference "swift-atomics" */,
 				B3FE76E72CB8318800721D62 /* XCRemoteSwiftPackageReference "wallet-core" */,
+				B3C2F5142CBEDA99000C5D49 /* XCRemoteSwiftPackageReference "swift-nio-ssl" */,
+				B363D1492CC1445100CD67FB /* XCRemoteSwiftPackageReference "ObjectivePGP" */,
 			);
 			productRefGroup = B30A87682CB4DA680048EB68 /* Products */;
 			projectDirPath = "";
@@ -158,6 +215,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3C2F5112CBED9AF000C5D49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B3C2F5102CBED9AF000C5D49 /* web3.swift */;
+		};
+		B3C2F5132CBED9B2000C5D49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B3C2F5122CBED9B2000C5D49 /* web3-zksync.swift */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B30A876C2CB4DA680048EB68 /* Debug */ = {
@@ -293,6 +361,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -336,6 +405,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -352,6 +422,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "conet.conet-libs";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
@@ -388,6 +459,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B363D1492CC1445100CD67FB /* XCRemoteSwiftPackageReference "ObjectivePGP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/ObjectivePGP.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		B37253CE2CB5E10C002E4102 /* XCRemoteSwiftPackageReference "web3.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/argentlabs/web3.swift.git";
@@ -412,6 +491,14 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		B3C2F5142CBEDA99000C5D49 /* XCRemoteSwiftPackageReference "swift-nio-ssl" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio-ssl.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.28.0;
+			};
+		};
 		B3FE76E72CB8318800721D62 /* XCRemoteSwiftPackageReference "wallet-core" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/trustwallet/wallet-core";
@@ -423,15 +510,98 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B3FE76E32CB82E1700721D62 /* web3-zksync.swift */ = {
+		B363D14A2CC1445100CD67FB /* ObjectivePGP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B363D1492CC1445100CD67FB /* XCRemoteSwiftPackageReference "ObjectivePGP" */;
+			productName = ObjectivePGP;
+		};
+		B363D14C2CC16F6B00CD67FB /* web3-zksync.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "web3-zksync.swift";
+		};
+		B363D14E2CC16F6B00CD67FB /* web3.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = web3.swift;
+		};
+		B3C2F5102CBED9AF000C5D49 /* web3.swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253CE2CB5E10C002E4102 /* XCRemoteSwiftPackageReference "web3.swift" */;
+			productName = web3.swift;
+		};
+		B3C2F5122CBED9B2000C5D49 /* web3-zksync.swift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B37253CE2CB5E10C002E4102 /* XCRemoteSwiftPackageReference "web3.swift" */;
 			productName = "web3-zksync.swift";
 		};
-		B3FE76E52CB82E1700721D62 /* web3.swift */ = {
+		B3C2F5322CBEDDD3000C5D49 /* Atomics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B37253CE2CB5E10C002E4102 /* XCRemoteSwiftPackageReference "web3.swift" */;
-			productName = web3.swift;
+			package = B37253DE2CB6AE2A002E4102 /* XCRemoteSwiftPackageReference "swift-atomics" */;
+			productName = Atomics;
+		};
+		B3C2F5342CBEDEA2000C5D49 /* _NIOConcurrency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = _NIOConcurrency;
+		};
+		B3C2F5362CBEDEA2000C5D49 /* _NIOFileSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = _NIOFileSystem;
+		};
+		B3C2F5382CBEDEA2000C5D49 /* _NIOFileSystemFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = _NIOFileSystemFoundationCompat;
+		};
+		B3C2F53A2CBEDEA2000C5D49 /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+		B3C2F53C2CBEDEA2000C5D49 /* NIOConcurrencyHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOConcurrencyHelpers;
+		};
+		B3C2F53E2CBEDEA2000C5D49 /* NIOCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOCore;
+		};
+		B3C2F5402CBEDEA2000C5D49 /* NIOEmbedded */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOEmbedded;
+		};
+		B3C2F5422CBEDEA2000C5D49 /* NIOFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOFoundationCompat;
+		};
+		B3C2F5442CBEDEA2000C5D49 /* NIOHTTP1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOHTTP1;
+		};
+		B3C2F5462CBEDEA3000C5D49 /* NIOPosix */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOPosix;
+		};
+		B3C2F5482CBEDEA3000C5D49 /* NIOTestUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOTestUtils;
+		};
+		B3C2F54A2CBEDEA3000C5D49 /* NIOTLS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOTLS;
+		};
+		B3C2F54C2CBEDEA3000C5D49 /* NIOWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B37253D72CB5E8CD002E4102 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOWebSocket;
 		};
 		B3FE76E82CB8318800721D62 /* SwiftProtobuf */ = {
 			isa = XCSwiftPackageProductDependency;
